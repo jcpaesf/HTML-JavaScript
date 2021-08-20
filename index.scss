@@ -1,0 +1,32 @@
+:root {
+	--green: #75BC97;
+	--greenDark: #1E6B4E;
+	--greenDark1: #196146;
+	--greenDark2: #15573F;
+	--white: #FFFFFF;
+	--whiteDark: #F2F2F2;
+	--gray: #848484;
+	--grayLight: #A8A8A8;
+	--grayDark: #A9A9A9;
+	--dark: #0C261C;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+body, input, button {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, strong, p, span, a, select {
+	font-family: "Montserrat", sans-serif;
+}
+
+button {
+	cursor: pointer;
+}

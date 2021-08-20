@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Front End Test - Greenthumb</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./index.scss" />
+  <link rel="stylesheet" href="./styles/header.scss" />
+  <link rel="stylesheet" href="./styles/filter.scss" />
+  <link rel="stylesheet" href="./styles/result.scss" />
+</head>
+
+<body>
+  <header class="header-style">
+    <div>
+      <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+      <p>Find your next green friend</p>
+      <img src="images/icons/arrow-down.svg" alt="ArrowDown" />
+    </div>
+    <div></div>
+    <div></div>
+  </header>
+  <section class="filter-style">
+    <div>
+      <img src="images/illustrations/sun.png" alt="Sun" />
+      <p>1. Set the amount of sunlight your plant will get.</p>
+      <div>
+        <select id="filter-sunlight">
+          <option value="">Select...</option>
+          <option value="no">No</option>
+          <option value="low">Low</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <img src="images/illustrations/wateringcan.png" alt="Wateringcan" />
+      <p>2. How often do you want to water your plant?</p>
+      <div>
+        <select id="filter-water">
+          <option value="">Select...</option>
+          <option value="regularly">Regularly</option>
+          <option value="daily">Daily</option>
+          <option value="rarely">Rarely</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <img src="images/illustrations/dog.png" alt="Wateringcan" />
+      <p>3. Do you have pets? Do they chew plants?</p>
+      <div>
+        <select id="filter-pets">
+          <option value="">Select...</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <section id="result" class="result-style">
+    <div id="no-results">
+      <div>
+        <h1>No results yet...</h1>
+
+        <p>Use the filters above to find the plant that best fits your environment :) </p>
+      </div>
+      <div>
+        <img src="images/illustrations/no-results.png" alt="Noresults" />
+      </div>
+    </div>
+
+    <div id="content">
+      <img src="images/illustrations/pick.png" alt="Pick" />
+
+      <h1>Our picks for you</h1>
+
+      <div id="plants" class="plants"></div>
+
+      <button id="button-top" class="button-back-to-top">
+        <img src="images/icons/arrow-up.svg" alt="ArrowUp" />
+        back to the top
+      </button>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="scripts/events.js"></script>
+</body>
+
+</html>

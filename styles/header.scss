@@ -1,0 +1,78 @@
+.header-style {
+	display: grid;
+	grid-template-columns: 2fr 0.8fr 0.5fr;
+
+	min-height: 500px;
+
+	background: var(--green);
+
+	& > div:nth-child(1) {
+		display: grid;
+		
+		align-items: center;
+		justify-content: center;
+
+		padding: 57px 0px;
+		
+		background: url("../images/hero/desktop/left-leaves.png") no-repeat;
+		background-size: 100% 100%;
+
+		& > p {
+			height: 252px;
+			width: 400px;
+			font-size: 70px;
+			font-weight: 700;
+			color: var(--white);
+
+			@media(max-width: 1330px) {
+				font-size: 60px;
+			}
+
+			@media(max-width: 1024px) {
+				font-size: 40px;
+				
+				width: 251px;
+				height: 144px;
+			}
+		}
+
+		@media(max-width: 1024px) {
+			height: 412px;
+			background: url("../images/hero/mobile/mobile-leaves.png") no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+
+	& > div:nth-child(2) {
+		background: url("../images/hero/desktop/plantperson.png") no-repeat;
+		background-size: contain;
+		background-position: center;
+
+		@media(max-width: 1024px) {
+			background: url("../images/hero/mobile/mobile-plantperson.png") no-repeat;
+			background-size: contain;
+
+			align-self: center;
+
+			width: 276px;
+			height: 234px;
+		}
+	}
+
+	& > div:nth-child(3) {
+		background: url("../images/hero/desktop/right-leaves.png") no-repeat;
+		background-size: 100% 100%;
+
+		@media(max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	@media(max-width: 1024px) {
+		display: flex;
+		
+		flex-direction: column;
+
+		min-height: 593px;
+	}
+}
