@@ -6,86 +6,92 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./index.scss" />
-  <link rel="stylesheet" href="./styles/header.scss" />
-  <link rel="stylesheet" href="./styles/filter.scss" />
-  <link rel="stylesheet" href="./styles/result.scss" />
+  <link rel="stylesheet" href="./styles/styles.scss" />
+  <script src="scripts/events.js" defer></script>
 </head>
 
 <body>
-  <header class="header-style">
-    <div>
-      <img src="images/icons/logo-white.svg" alt="Greenthumb" />
-      <p>Find your next green friend</p>
-      <img src="images/icons/arrow-down.svg" alt="ArrowDown" />
+
+  <!-- Header green thumb. -->
+  <header class="header">
+    <div class="header__left"></div>
+    <div class="header__center"></div>
+    <div class="header__right"></div>
+    <div class="header__apresentation">
+      <img class="header__apresentation--logo" src="images/icons/logo-white.svg" alt="Greenthumb" />
+      <p class="header__apresentation--title">Find your next green friend</p>
+      <img class="header__apresentation--arrowdown" src="images/icons/arrow-down.svg" alt="ArrowDown" />
     </div>
-    <div></div>
-    <div></div>
   </header>
-  <section class="filter-style">
-    <div>
-      <img src="images/illustrations/sun.png" alt="Sun" />
-      <p>1. Set the amount of sunlight your plant will get.</p>
-      <div>
-        <select id="filter-sunlight">
-          <option value="">Select...</option>
-          <option value="no">No</option>
-          <option value="low">Low</option>
-          <option value="high">High</option>
-        </select>
+
+  <section class="filter">
+    <div class="filter__sun">
+      <div class="filter__sun--content">
+        <img src="images/illustrations/sun.png" alt="Sun" />
+        <p>1. Set the amount of sunlight your plant will get.</p>
+        <div>
+          <select id="filter-sunlight">
+            <option value="">Select...</option>
+            <option value="no">No</option>
+            <option value="low">Low</option>
+            <option value="high">High</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div>
-      <img src="images/illustrations/wateringcan.png" alt="Wateringcan" />
-      <p>2. How often do you want to water your plant?</p>
-      <div>
-        <select id="filter-water">
-          <option value="">Select...</option>
-          <option value="regularly">Regularly</option>
-          <option value="daily">Daily</option>
-          <option value="rarely">Rarely</option>
-        </select>
+    <div class="filter__water">
+      <div class="filter__water--content">
+        <img src="images/illustrations/wateringcan.png" alt="Wateringcan" />
+        <p>2. How often do you want to water your plant?</p>
+        <div>
+          <select id="filter-water">
+            <option value="">Select...</option>
+            <option value="regularly">Regularly</option>
+            <option value="daily">Daily</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div>
-      <img src="images/illustrations/dog.png" alt="Wateringcan" />
-      <p>3. Do you have pets? Do they chew plants?</p>
-      <div>
-        <select id="filter-pets">
-          <option value="">Select...</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
+    <div class="filter__pets">
+      <div class="filter__pets--content">
+        <img src="images/illustrations/dog.png" alt="Wateringcan" />
+        <p>3. Do you have pets? Do they chew plants?</p>
+        <div>
+          <select id="filter-pets">
+            <option value="">Select...</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
       </div>
     </div>
   </section>
-  <section id="result" class="result-style">
-    <div id="no-results">
-      <div>
+  <section id="result" class="result">
+    <div id="results-no" class="result__no">
+      <div class="result__no--content">
         <h1>No results yet...</h1>
 
         <p>Use the filters above to find the plant that best fits your environment :) </p>
       </div>
-      <div>
+      <div class="result__no--img">
         <img src="images/illustrations/no-results.png" alt="Noresults" />
       </div>
     </div>
 
-    <div id="content">
-      <img src="images/illustrations/pick.png" alt="Pick" />
+    <div class="result__yes" id="results-yes">
+      <img class="result__yes--pick" src="images/illustrations/pick.png" alt="Pick" />
 
-      <h1>Our picks for you</h1>
+      <h1 class="result__yes--title">Our picks for you</h1>
 
-      <div id="plants" class="plants"></div>
+      <div id="plants" class="result__yes--plants"></div>
 
-      <button id="button-top" class="button-back-to-top">
+      <button id="button-top" class="result__yes--buttonup">
         <img src="images/icons/arrow-up.svg" alt="ArrowUp" />
         back to the top
       </button>
     </div>
   </section>
-
-  <script type="text/javascript" src="scripts/events.js"></script>
 </body>
 
 </html>
