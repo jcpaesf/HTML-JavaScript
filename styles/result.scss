@@ -6,7 +6,7 @@
 
 %favorite-item {
 	position: absolute;
-	top: 10px;
+	top: 30px;
 	left: 0px;
 
 	width: 189px;
@@ -172,6 +172,9 @@
 					align-items: center;
 					justify-content: center;
 
+					min-height: 220px;
+					max-height: 220px;
+
 					& div {
 						width: 80%;
 						height: 80%;
@@ -196,20 +199,42 @@
 					color: $greenDark;
 					font-weight: 700;
 
-					& div {
+					&--price {
 						display: flex;
 						flex: 1;
 						justify-content: space-between;
 						align-items: center;
 
-						& div {
+						&--icons {
 							display: flex;
 
 							align-items: center;
 							justify-content: flex-end;
 
-							& img {
-								margin-left: 10px;
+							& div:nth-child(1) {
+								width: 20px;
+								height: 20px;
+								background: url("../images/icons/pet.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
+
+							}
+
+							& div:nth-child(2) {
+								width: 20px;
+								height: 20px;
+								background: url("../images/icons/high-sun.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
+								margin: 0px 10px;
+							}
+
+							& div:nth-child(3) {
+								width: 20px;
+								height: 20px;
+								background: url("../images/icons/3-drops.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
 							}
 						}
 					}
@@ -227,6 +252,11 @@
 				display: flex;
 				flex-direction: column;
 
+				@include mobile {
+					min-width: calc(100vw / 1.5);
+					min-height: 321px;
+				}
+
 				&--favorite {
 					@extend %favorite-item;
 				}
@@ -243,6 +273,16 @@
 						height: 100%;
 						width: 100%;
 						object-fit: contain;
+
+						@include mobile {
+							min-height: 220px;
+							max-height: 220px;
+						}
+					}
+
+					@include mobile {
+						min-height: 220px;
+						max-height: 220px;
 					}
 				}
 				
@@ -263,6 +303,10 @@
 							font-weight: 700;
 							font-size: 35px;
 							color: $greenDark;
+
+							@include mobile {
+								font-size: 16px;
+							}
 						}
 					}
 
@@ -279,14 +323,55 @@
 							font-size: 24px;
 							font-weight: 700;
 							align-items: flex-end;
+
+							@include mobile {
+								font-size: 16px;
+							}
 						}
 
 						&--icons {
 							flex: 1;
 							@extend %flex-end;
 							
-							& img {
-								margin-left: 20px;
+							& div:nth-child(1) {
+								width: 30px;
+								height: 30px;
+								background: url("../images/icons/pet.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
+
+								@include mobile {
+									width: 20px;
+									height: 20px;
+								}
+
+							}
+
+							& div:nth-child(2) {
+								width: 30px;
+								height: 30px;
+								background: url("../images/icons/high-sun.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
+								margin: 0px 10px;
+
+								@include mobile {
+									width: 20px;
+									height: 20px;
+								}
+							}
+
+							& div:nth-child(3) {
+								width: 30px;
+								height: 30px;
+								background: url("../images/icons/3-drops.svg") no-repeat;
+								background-size: contain;
+								background-position: center;
+
+								@include mobile {
+									width: 20px;
+									height: 20px;
+								}
 							}
 						}
 					}

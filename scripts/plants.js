@@ -58,9 +58,9 @@ class Plants {
               $${item.price}
             </div>
             <div class="result__yes--plants--item--first--footer--price--icons">
-              <img src="images/icons/pet.svg" />
-              <img src="images/icons/high-sun.svg" />
-              <img src="images/icons/3-drops.svg" />
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
           </div>
         </div>
@@ -79,19 +79,19 @@ class Plants {
         </div>
 
         <div class="result__yes--plants--item--footer">
-          <div>
+          <div class="result__yes--plants--item--footer--name">
             <span>
               ${item.name}
             </span>
           </div>
-          <div>
+          <div class="result__yes--plants--item--footer--price">
             <span>
               $${item.price}
             </span>
-            <div>
-              <img src="images/icons/pet.svg" />
-              <img src="images/icons/high-sun.svg" />
-              <img src="images/icons/3-drops.svg" />
+            <div class="result__yes--plants--item--footer--price--icons">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
           </div>
         </div>
@@ -107,9 +107,7 @@ class Plants {
 
         plantsOrderByFavorite.forEach((item, index) => {
             !index
-              ? window.innerWidth <= 720
-                ? this.renderItem(item)
-                : this.renderFirstItem(item)
+              ? this.renderFirstItem(item)
               : this.renderItem(item);
         });
     }
