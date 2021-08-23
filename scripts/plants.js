@@ -41,7 +41,7 @@ class Plants {
 
     renderFirstItem(item) {
         const htmlFirstItem = `<div class="result__yes--plants--item--first">
-        ${item.staff_favorite ? '<div class="result__yes--plants--item--first--favorite">Staff favorite</div>' : ''}
+        ${item.staff_favorite ? '<div class="result__yes--plants--item--first--favorite">✨ Staff favorite</div>' : ''}
         
         <div class="result__yes--plants--item--first--img">
           <div>
@@ -71,7 +71,7 @@ class Plants {
 
     renderItem(item) {
         const htmlItem = `<div class="result__yes--plants--item">
-        ${item.staff_favorite ? '<div class="result__yes--plants--item--favorite">Staff favorite</div>' : ''}
+        ${item.staff_favorite ? '<div class="result__yes--plants--item--favorite">✨ Staff favorite</div>' : ''}
         <div class="result__yes--plants--item--img">
           <div>
             <img src="${item.url}" alt="${item.name}" />

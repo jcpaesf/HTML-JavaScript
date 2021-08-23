@@ -1,6 +1,5 @@
 import Plants from './plants';
 
-
 const onload = () => {
     const filterSunlight = document.getElementById('filter-sunlight');
     const filterWater = document.getElementById('filter-water');
