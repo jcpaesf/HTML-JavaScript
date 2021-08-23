@@ -62,10 +62,6 @@
 			& > h1 {
 				color: $grayDark;
 				font-size: 45px;
-
-				@media(max-width: 1024px) {
-					width: 250px;
-				}
 			}
 
 			& > p {
@@ -90,15 +86,6 @@
 				width: 104.7px;
 				height: 203.27px;
 			}
-
-			@media(max-width: 1024px) {
-				margin: 25px;
-			}
-		}
-
-		@media(max-width: 1024px) {
-			display: flex;
-			flex-direction: column;
 		}
 	}
 
@@ -401,140 +388,4 @@
 			}
 		}
 	}
-}
-
-.plants {
-	display: grid;
-	
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	
-	gap: 10px;
-
-	@media(max-width: 1024px) {
-		display: flex;
-
-		overflow-x: scroll;
-
-		width: 100%;
-	}
-}
-
-.plants-item {
-	display: flex;
-
-	flex-direction: column;
-
-	align-items: center;
-	justify-content: center;
-
-	background: $white;
-	border-radius: 5px;
-
-	height: 245px;
-
-	position: relative;
-
-	& > div:nth-child(1) {
-		display: flex;
-
-		align-items: flex-end;
-		justify-content: center;
-
-		flex: 1;
-
-		& > img {
-			height: 150px;
-			width: 150px;
-			object-fit: contain;
-		}
-	}
-
-	& > div:nth-child(2) {
-		display: flex;
-
-		flex: 0.3;
-
-		width: 100%;
-	}
-
-	@media(max-width: 1024px) {
-		width: 100%;
-		height: auto;
-	}
-}
-
-.favorite-plant-footer {
-	width: 100%;
-	display: flex;
-
-	justify-content: center;
-	
-	flex-direction: column;
-
-	padding: 0px 20px;
-}
-
-.favorite-plant-footer:nth-child(2) {
-	align-items: flex-end;
-}
-
-.favorite-plant {
-	display: flex;
-	
-	align-items: center;
-	justify-content: center;
-	
-	position: absolute;
-	top: 31px;
-	left: 0;
-
-	width: 189px;
-	height: 43px;
-
-	background: $green;
-
-	box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.181163);
-
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-}
-
-.plants-item-1 {
-	grid-row: span 2;
-	grid-column: span 2;
-
-	width: 100%;
-	height: 100%;
-}
-
-.text-favorite-plant {
-	font-size: 35px;
-	max-width: 189px;
-	font-weight: 700;
-	color: $greenDark;
-}
-
-.text-favorite-price {
-	font-size: 24px;
-	color: $greenDark;
-	font-weight: 700;
-}
-
-.text-recommended-favorite {
-	font-size: 18px;
-	font-weight: 300;
-	color: $white;
-}
-
-.not-favorite {
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-}
-
-.text-not-favorite {
-	color: $greenDark;
-	font-weight: 700;
-	font-size: 16px;
 }
